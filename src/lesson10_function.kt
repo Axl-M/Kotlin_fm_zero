@@ -1,18 +1,19 @@
 fun main() {
     val name = getName()
     val age = getAge()
+    printNameAndAge(name, age)
 }
 
 fun getName() : String? {
     print("Введите имя: ")
-    val name = readLine()
-    println(name)
     return readLine()
 }
 
 fun getAge() : Int? {
     print("Введите возраст: ")
-    val age = readLine()?.toInt()
-    println(age)
-    return age
+    return readLine()?.toInt()
+}
+
+fun printNameAndAge(name: String?, age: Int?) {
+    println("Данные пользователя: $name, $age лет" )
 }
