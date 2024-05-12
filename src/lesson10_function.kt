@@ -1,7 +1,5 @@
 fun main() {
-    val name = getName()
-    val age = getAge()
-    printNameAndAge(name, age)
+    printNameAndAge(userName = getName(), userAge = getAge())
 }
 
 fun getName() : String? {
@@ -9,11 +7,17 @@ fun getName() : String? {
     return readLine()
 }
 
+// можно сократить. не нужно {} и return. Только 1 строка (print использовать не сможем)
+//fun getName() : String? = readLine()
+
+
 fun getAge() : Int? {
     print("Введите возраст: ")
     return readLine()?.toInt()
 }
 
-fun printNameAndAge(name: String?, age: Int?) {
-    println("Данные пользователя: $name, $age лет" )
+//fun getAge() : Int? = readLine()?.toInt()
+
+fun printNameAndAge(userName: String?, userAge: Int?) {
+    println("Данные пользователя: $userName, $userAge лет" )
 }
