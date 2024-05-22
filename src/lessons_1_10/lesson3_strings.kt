@@ -1,3 +1,5 @@
+package lessons_1_10
+
 fun main() {
     val greeting = "Здравстуйте"
     val userName = "мой повелитель"

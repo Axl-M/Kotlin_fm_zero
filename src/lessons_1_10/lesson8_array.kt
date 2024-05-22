@@ -1,3 +1,5 @@
+package lessons_1_10
+
 fun main(){
     val arrayOfIngridients: Array<String> = arrayOf("яйцо", "помидор", "зелень", "соль", "перец")
     val intArray: IntArray = intArrayOf(4, 4, 2) // val intArray = intArrayOf()  можно просто проинициализировать

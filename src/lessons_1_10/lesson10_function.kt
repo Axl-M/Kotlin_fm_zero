@@ -1,3 +1,5 @@
+package lessons_1_10
+
 fun main() {
     printNameAndAge(userName = getName(), userAge = getAge())
 }
