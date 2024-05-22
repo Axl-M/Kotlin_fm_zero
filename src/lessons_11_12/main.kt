@@ -45,10 +45,15 @@ fun main() {
     dish2.removeFromFavorites()
     println( dish2.inFAvorites)
 
-    val ingridient1 = Ingridient()
-    println()
-    println(ingridient1.name)
-    ingridient1.name = "репчатый лук"
-    println(ingridient1.name)
+//    val ingridient1 = Ingridient()
+//    println()
+//    println(ingridient1.name)
+//    ingridient1.name = "репчатый лук"
+//    println(ingridient1.name)
 
+    val ingridient2 = Ingridient(name = "картошка", weight = 1, count = 1)
+    println(ingridient2.name)
+
+    var ingridient3 = Ingridient2(name = "морковь", weight = 50, count = 1, isNeedToPrepare = true)
+    println(ingridient3.name)
 }
