@@ -1,14 +1,15 @@
 package lesson14_OOP
 
-class Spaceship(
+open class Spaceship(   // open - у класса будут наследники.
+// Если надо запретить создание экземпляров этого класса - объявить его abstract class
     val name: String,
     val speed: Int,
     val unmanned: Boolean = false,
 ) {
     fun switchToWarpMode(){
-        println("Переход в варп-режим")
+        println("${name}: Переход в варп-режим")
     }
     fun runSystemDiagnostic(){
-        println("запущена диагностика систем корабля")
+        println("${name}: запущена диагностика систем корабля")
     }
 }
