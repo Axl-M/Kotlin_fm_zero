@@ -11,6 +11,7 @@ class Industrial(
     }
 
     override fun runSystemDiagnostic(){
+        super.runSystemDiagnostic()     // сначала вызвать функцию родительского класса
         println("${name}: запущена диагностика дронов и майнеров")
     }
 }
