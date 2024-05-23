@@ -9,4 +9,8 @@ class Industrial(
     fun launchScanningDrones(){
         println("$name: сканирующие дроны запущены")
     }
+
+    override fun runSystemDiagnostic(){
+        println("${name}: запущена диагностика дронов и майнеров")
+    }
 }

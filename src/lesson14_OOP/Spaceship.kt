@@ -9,7 +9,7 @@ open class Spaceship(   // open - у класса будут наследник�
     fun switchToWarpMode(){
         println("${name}: Переход в варп-режим")
     }
-    fun runSystemDiagnostic(){
+    open fun runSystemDiagnostic(){
         println("${name}: запущена диагностика систем корабля")
     }
 }
