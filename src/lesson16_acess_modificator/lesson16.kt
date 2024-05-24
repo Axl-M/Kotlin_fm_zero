@@ -16,4 +16,10 @@ fun main() {
     // упаковка данных и ф-ций для работы с ними внутрь общего компонента
     Support().printInfo()
 
+    println()
+    println(guide.getNumberOfPages())
+    guide.setNumberOfPages(42_000)
+    println(guide.getNumberOfPages())
+
+
 }
