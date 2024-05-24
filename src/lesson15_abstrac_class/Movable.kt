@@ -9,7 +9,7 @@ interface Movable {
 
     // можно объвить методы без реализации (шаблоны), либо реализацию по умолчанию
     fun startEngine(){
-        println("Двигатель запущщен")
+        println("Двигатель запущен")
     }
 
     fun prepareForTakeoff()
