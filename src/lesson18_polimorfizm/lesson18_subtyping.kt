@@ -12,29 +12,33 @@ fun main(){
     // parametric (параметрический). Через обобщенные типы.
 
     val creationDate = Date()
-    val note = NotesAppItem()
 
-    note.addItemToCell(
+
+    val messageItem: MessageItem = MessageItem(
         "call sister",
         creationDate,
         "message",
         "Call sister to congratulate",
     )
-    println()
 
-    note.addItemToCell(
+    val phoneItem: PhoneItem = PhoneItem(
         "sister's number",
         creationDate,
         "phone",
         8914777000,
     )
-    println()
 
-    note.addItemToCell(
+    val listItem: ListItem =  ListItem(
         "TodoList",
         creationDate,
         "List",
         listOf("wash dog", "do the cleaning", "buy new shoes"),
     )
+
+    println(messageItem.getItemData())
+    println()
+    println(phoneItem.getItemData())
+    println()
+    println(listItem.getItemData())
 
 }
