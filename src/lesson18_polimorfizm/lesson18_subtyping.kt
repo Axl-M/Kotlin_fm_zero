@@ -13,32 +13,69 @@ fun main(){
 
     val creationDate = Date()
 
+//    val messageItem: MessageItem = MessageItem(
+//        "call sister",
+//        creationDate,
+//        "message",
+//        "Call sister to congratulate",
+//    )
+//
+//    val phoneItem: PhoneItem = PhoneItem(
+//        "sister's number",
+//        creationDate,
+//        "phone",
+//        8914777000,
+//    )
+//
+//    val listItem: ListItem =  ListItem(
+//        "TodoList",
+//        creationDate,
+//        "List",
+//        listOf("wash dog", "do the cleaning", "buy new shoes"),
+//    )
 
-    val messageItem: MessageItem = MessageItem(
+    // типы можно указать базовый класс
+    val messageItem: NotesAppItemSubtyping = MessageItem(
         "call sister",
         creationDate,
         "message",
         "Call sister to congratulate",
     )
 
-    val phoneItem: PhoneItem = PhoneItem(
+    val phoneItem: NotesAppItemSubtyping = PhoneItem(
         "sister's number",
         creationDate,
         "phone",
         8914777000,
     )
 
-    val listItem: ListItem =  ListItem(
+    val listItem: NotesAppItemSubtyping =  ListItem(
         "TodoList",
         creationDate,
         "List",
         listOf("wash dog", "do the cleaning", "buy new shoes"),
     )
 
-    println(messageItem.getItemData())
-    println()
-    println(phoneItem.getItemData())
-    println()
-    println(listItem.getItemData())
 
+
+//    println(messageItem.getItemData())
+//    println()
+//    println(phoneItem.getItemData())
+//    println()
+//    println(listItem.getItemData())
+//    ===================================
+
+    // или так
+    // parametric (параметрический). Через обобщенные типы.
+
+    val arrayOfNotes = arrayOf<NotesAppItemSubtyping>(messageItem, phoneItem, listItem)
+    showAllNotes(arrayOfNotes)
+
+}
+
+fun showAllNotes(notes: Array<NotesAppItemSubtyping>){
+    notes.forEach {
+        println()
+        println(it.getItemData())
+    }
 }

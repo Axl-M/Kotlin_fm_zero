@@ -4,7 +4,6 @@ import java.util.Date
 
 // subtyping (полиморфизм включения). Ф-ции использующие базовый тип должны использовать подтипы базового типа
 open class NotesAppItemSubtyping {
-
     open fun getItemData() = ""
 }
 
