@@ -37,6 +37,11 @@ fun main(){
     println(Status.NEW.ordinal) // её порядковый номер
     // values - массив ENUM-ов
     for (i in Status.values()) println(i)
+
+    println("=============")
+    println(Status.NEW.getStatusDescription())
+    println(Status.COOKING.getStatusDescription())
+    println(Status.COMPLETED.getStatusDescription())
 }
 
 //enum class Status {
@@ -47,10 +52,28 @@ fun main(){
 //}
 
 enum class Status(val id:Int) {
-    NEW(101),
-    COOKING(102),
-    COMPLETED(103),
-    ERROR(0),
+    NEW(101) {
+        override fun getStatusDescription(): String {
+            return "Заказ создан и ожидает оплаты"
+        }
+    },
+    COOKING(102) {
+        override fun getStatusDescription(): String {
+            return "Заказ оплачен и начал готовиться"
+        }
+    },
+    COMPLETED(103) {
+        override fun getStatusDescription(): String {
+            return "Заказ готов, можно забирать"
+        }
+    },
+    ERROR(0) {
+        override fun getStatusDescription(): String {
+            return "Что-то пошло не так. Мы уже разбираемся"
+        }
+    };
+
+    abstract fun getStatusDescription(): String
 }
 
 fun setStatus(status: Status){
